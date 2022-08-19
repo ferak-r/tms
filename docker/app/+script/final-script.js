@@ -1,0 +1,3 @@
+
+try {loader()} catch(e){};
+

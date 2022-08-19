@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `tirtash_db`.`xxport`.`xportid` AS `xdepartureportid`,`tirtash_db`.`xxport`.`xport` AS `xdepartureport` from `tirtash_db`.`xxport`
+md5=90a85c844c7657907edd9621797b16d2
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2022-08-09 19:10:07
+create-version=1
+source=select `xxport`.`xportid` AS `xdepartureportid`,`xxport`.`xport` AS `xdepartureport` from `xxport`
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `tirtash_db`.`xxport`.`xportid` AS `xdepartureportid`,`tirtash_db`.`xxport`.`xport` AS `xdepartureport` from `tirtash_db`.`xxport`

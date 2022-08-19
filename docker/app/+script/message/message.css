@@ -1,0 +1,172 @@
+.msgDiv {
+	position: absolute;
+	direction: rtl;
+	width: 400px;
+	top: -100px;
+	left: 8px;
+	background-color: #FFFFCC;
+	border: 1px solid #333333;
+	margin: 0;
+	padding: 0;
+	font-family: Tahoma, Verdana;
+	font-size: 12px;
+	z-index: 1300;
+	opacity: .97;
+	filter: alpha(opacity=97);
+}
+
+.msgDiv DIV {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+.msgDiv .header {
+	height: 20px;
+	background-color: #003366;
+	border: 1px solid #CCCCCC;
+}
+
+.msgDiv .header .close {
+	float: left;
+	display: block;
+	height: 14px;
+	width: 14px;
+	margin: 2px;
+	background-color:#CCCCCC;
+	border: 1px solid #333333;
+	text-align: center;
+	cursor: pointer;
+	font-size: 10px;
+	text-decoration: none;
+	color: #000000;
+}
+
+.msgDiv .header .title {
+	color: #F5F5F5;
+	font-weight: 600;
+	padding-right: 4px;
+	margin-top: 3px;
+}
+
+.msgDiv .picture {
+	display: none;
+	float: right;
+	display: table;
+	width: 48px;
+	height: 40px;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.msgDiv .content {
+	padding: 8px 8px 16px 8px;
+	direction: ltr;
+}
+
+.msgDiv .extra {
+	padding: 4px;
+	text-align: center;
+}
+
+.msgDiv .extra INPUT {
+	display: none;
+	border-top: 1px solid #F0F0F0;
+	border-left: 1px solid #F0F0F0;
+	border-bottom: 1px solid #666666;
+	border-right: 1px solid #666666;
+	background-color:#CCCCCC;
+	width: 55px;
+	height: 18px;
+	font-size: 10px;
+}
+.msgDiv .extra SELECT {
+	display: none;
+	direction:ltr;
+	width: 75px;
+	height: 18px;
+	font-size: 10px;
+
+}
+/*-------------------Special Styles--------------------*/
+
+/*  OK  */
+#msg_ok .picture {
+	display: block;
+	background-image: url(images/ok.png);
+}
+
+#msg_ok .extra #msgBtnOk{
+	display: inline;
+}
+
+/*  INFO  */
+#msg_info .picture {
+	display: block;
+	background-image: url(images/info.png);
+}
+
+#msg_info .extra #msgBtnYes, #msg_info .extra #msgBtnNo{
+	display: inline;
+}
+
+#msg_help .extra{
+	text-align: right;
+}
+
+/*  ERROR  */
+#msg_error .picture {
+	display: block;
+	background-image: url(images/error.png);
+}
+
+#msg_error .extra #msgBtnOk{
+	display: inline;
+}
+
+/*  HELP  */
+#msg_help .picture {
+	display: block;
+	background-image: url(images/help.png);
+}
+
+#msg_help .extra{
+	text-align: right;
+}
+
+#msg_help .extra #msgBtnYes, #msg_help .extra #msgBtnNo{
+	display: inline;
+}
+
+/*  LOCK  */
+#msg_lock .picture {
+	display: block;
+	background-image: url(images/lock.png);
+}
+
+#msg_lock .extra #msgBtnOk{
+	display: inline;
+}
+
+/*  ALERT  */
+#msg_alert .picture {
+	display: block;
+	background-image: url(images/alert.png);
+}
+
+#msg_alert .extra #msgBtnOk, #msg_alert .extra #msgBtnCancel{
+	display: inline;
+}
+
+/* REMINDER */
+#msg_reminder .picture {
+	display: block;
+	background-image: url(images/reminder.png);
+}
+
+#msg_reminder .extra #msgBtnDel, #msg_reminder .extra #msgBtnPostpone, #msg_reminder .extra #msgCmbPostpone{
+	display: inline;
+}
+
+
+

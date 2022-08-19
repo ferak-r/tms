@@ -1,0 +1,37 @@
+Options -Indexes
+Options +FollowSymLinks
+RewriteEngine on
+RewriteBase /
+#AddType  application/octet-stream  .doc .xls .pdf .jpg .jpeg .gif .png .docx .xlsx
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^pic/([_a-z\/]+)/([\d_]+)(?:(?:w(\d+))|(?:h(\d+))|(?:c(\d+))|(?:crv(\d+))|(?:bg([A-F\d]+))|(?:r([\+\-\.\d]+)))*(?:/.+)?\.(jpg|gif|png)$   /showpic.php?dir=$1&pic=$2&w=$3&h=$4&crop=$5&curve=$6&bgcolor=$7&rotate=$8&output=$9&quality=90 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^pic/([\w\/]+)/([\d_]+)(?:(?:w(\d+))|(?:h(\d+))|(?:c(\d+))|(?:mh(\d+))|(?:mw(\d+))|(?:crv(\d+)))*/.*\.(jpg|gif|png)$   /showpic.php?dir=$1&pic=$2&w=$3&h=$4&crop=$5&mh=$6&mw=$7&curve=$8&output=$9&quality=90 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^cache\/(\w+\.(css|js))$   777/_smarty_cache/$1 [L]
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^download/([\w\/]+)/([^/]+)/[^/]+$   777/$1/$2 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^upload/(\w+)/(\w+/)?(\w+/)?([^/]+)/.*$   777/$1$2$3/$4 [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(fide|federation|admin)\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?$		index.php?section=$1&module=$2&cmd=$3&id=$4&$5=$6&$7=$8 [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?$		index.php?module=$1&cmd=$2&id=$3&$4=$5&$6=$7&$8=$9 [L,QSA]
+
+
+RewriteRule ^(\w+)\.(shtm)$ index.php?module=static&page=$1 [L,QSA]
+#RewriteRule ^getfile\/([^\/]+)\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?([^\/]+)?\/?$				getfile.php?cmd=$1&$2=$3&$4=$5&$6=$7&$8=$9 [L,QSA]
+
+#RewriteCond %{REQUEST_URI} !(^/777/\w+/)
+RewriteRule (^|/)[\.\+\!]   [R=404]
+
+
+

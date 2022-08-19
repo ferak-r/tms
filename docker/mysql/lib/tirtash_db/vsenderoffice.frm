@@ -1,0 +1,15 @@
+TYPE=VIEW
+query=select `tirtash_db`.`xxoffice`.`xofficeid` AS `xsenderofficeid`,`tirtash_db`.`xxoffice`.`xoffice` AS `xsenderoffice` from `tirtash_db`.`xxoffice`
+md5=504fe1038451c6f0c75c1914cfdda2ef
+updatable=1
+algorithm=0
+definer_user=root
+definer_host=%
+suid=2
+with_check_option=0
+timestamp=2022-08-09 19:10:07
+create-version=1
+source=select `xxoffice`.`xofficeid` AS `xsenderofficeid`,`xxoffice`.`xoffice` AS `xsenderoffice` from `xxoffice`
+client_cs_name=utf8mb4
+connection_cl_name=utf8mb4_unicode_ci
+view_body_utf8=select `tirtash_db`.`xxoffice`.`xofficeid` AS `xsenderofficeid`,`tirtash_db`.`xxoffice`.`xoffice` AS `xsenderoffice` from `tirtash_db`.`xxoffice`
